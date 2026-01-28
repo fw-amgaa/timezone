@@ -7,7 +7,7 @@ import { db, eq, and, isNull, isNotNull, lt, gte, inArray } from "@timezone/data
 import {
   users,
   organizations,
-  timeEntries,
+  shifts,
   scheduleAssignments,
   scheduleSlots,
   scheduledNotifications,
@@ -28,7 +28,7 @@ import {
 interface ActiveShiftInfo {
   userId: string;
   organizationId: string;
-  timeEntryId: string;
+  shiftId: string;
   templateName: string;
   slotId: string;
   endTime: string;
@@ -45,17 +45,17 @@ async function getActiveShiftsWithSchedules(
 ): Promise<ActiveShiftInfo[]> {
   const results: ActiveShiftInfo[] = [];
 
-  // Get all active time entries (clocked in but not clocked out)
-  const activeEntries = await db.query.timeEntries.findMany({
+  // Get all active shifts (clocked in but not clocked out)
+  const activeEntries = await db.query.shifts.findMany({
     where: and(
-      eq(timeEntries.organizationId, organizationId),
-      isNotNull(timeEntries.clockIn),
-      isNull(timeEntries.clockOut)
+      eq(shifts.organizationId, organizationId),
+      isNotNull(shifts.clockInAt),
+      isNull(shifts.clockOutAt)
     ),
     columns: {
       id: true,
       userId: true,
-      clockIn: true,
+      clockInAt: true,
     },
   });
 
@@ -71,7 +71,7 @@ async function getActiveShiftsWithSchedules(
       results.push({
         userId: entry.userId,
         organizationId,
-        timeEntryId: entry.id,
+        shiftId: entry.id,
         templateName: userSchedule.templateName,
         slotId: userSchedule.slotId,
         endTime: userSchedule.endTime,
@@ -262,11 +262,13 @@ async function wasClockOutReminderSent(
  */
 async function recordClockOutReminderSent(
   userId: string,
+  organizationId: string,
   slotId: string,
   scheduledFor: Date
 ): Promise<void> {
   await db.insert(scheduledNotifications).values({
     userId,
+    organizationId,
     scheduleSlotId: slotId,
     type: "clock_out_reminder",
     scheduledFor,
@@ -345,12 +347,13 @@ export async function checkClockOutReminders(): Promise<{
             message: `Your ${shift.templateName} shift ended at ${shift.endTime}. Don't forget to clock out!`,
             data: {
               screen: "clock" as const,
-              timeEntryId: shift.timeEntryId,
+              shiftId: shift.shiftId,
             },
           });
 
           await recordClockOutReminderSent(
             shift.userId,
+            shift.organizationId,
             shift.slotId,
             today
           );

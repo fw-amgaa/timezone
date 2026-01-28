@@ -1,4 +1,4 @@
-import { db, eq, sql } from "@timezone/database";
+import { db, eq, sql, asc } from "@timezone/database";
 import { teams, teamMembers, users } from "@timezone/database/schema";
 import { requireAuth } from "@/lib/auth-server";
 import { TeamsClient } from "./teams-client";
@@ -41,10 +41,13 @@ async function getEmployees(organizationId: string) {
       role: true,
       isActive: true,
     },
-    orderBy: [users.name],
+    orderBy: [asc(users.name)],
   });
 
-  return employees;
+  return employees.map((e) => ({
+    ...e,
+    isActive: e.isActive ?? true,
+  }));
 }
 
 export default async function TeamsPage() {

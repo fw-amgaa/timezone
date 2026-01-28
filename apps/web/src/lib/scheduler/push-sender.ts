@@ -7,8 +7,8 @@ import {
   notifications,
   pushTokens,
   NotificationData,
+  NotificationType,
 } from "@timezone/database/schema";
-import type { NotificationType } from "@timezone/database/schema";
 
 interface ExpoPushMessage {
   to: string;

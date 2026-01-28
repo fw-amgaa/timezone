@@ -40,7 +40,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           success: false,
-          error: "Invalid or expired verification token. Please verify your phone again.",
+          error:
+            "Invalid or expired verification token. Please verify your phone again.",
         },
         { status: 401 }
       );
@@ -92,7 +93,7 @@ export async function POST(request: NextRequest) {
       .where(eq(users.id, user.id));
 
     // Create session tokens
-    const session = await createMobileSession(user.id, deviceInfo);
+    const session = await createMobileSession(user.id, deviceInfo as any);
 
     // Update last login
     await db

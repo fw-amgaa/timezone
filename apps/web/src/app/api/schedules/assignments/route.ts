@@ -84,14 +84,16 @@ export async function GET(request: NextRequest) {
       assignments: filteredAssignments.map((a) => ({
         id: a.id,
         template: a.template
-          ? { id: a.template.id, name: a.template.name, color: a.template.color }
+          ? {
+              id: a.template.id,
+              name: a.template.name,
+              color: a.template.color,
+            }
           : null,
         team: a.team
           ? { id: a.team.id, name: a.team.name, color: a.team.color }
           : null,
-        user: a.user
-          ? { id: a.user.id, name: a.user.name }
-          : null,
+        user: a.user ? { id: a.user.id, name: a.user.name } : null,
         effectiveFrom: a.effectiveFrom?.toISOString() || null,
         effectiveUntil: a.effectiveUntil?.toISOString() || null,
         isActive: a.isActive,
@@ -130,7 +132,17 @@ export async function POST(request: NextRequest) {
 
   const { user } = auth;
 
-  if (!["org_admin", "org_manager", "super_admin"].includes(user.role)) {
+  if (!user || !user.organizationId) {
+    return NextResponse.json(
+      { success: false, error: "User not found or no organization" },
+      { status: 404 }
+    );
+  }
+
+  if (
+    !user.role ||
+    !["org_admin", "org_manager", "super_admin"].includes(user.role)
+  ) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }
@@ -272,7 +284,10 @@ export async function POST(request: NextRequest) {
         });
       }
     } catch (notifyError) {
-      console.error("Error sending schedule assignment notifications:", notifyError);
+      console.error(
+        "Error sending schedule assignment notifications:",
+        notifyError
+      );
     }
 
     return NextResponse.json({
@@ -323,7 +338,10 @@ export async function DELETE(request: NextRequest) {
 
   const { user } = auth;
 
-  if (!["org_admin", "org_manager", "super_admin"].includes(user.role)) {
+  if (
+    !user.role ||
+    !["org_admin", "org_manager", "super_admin"].includes(user.role)
+  ) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }
@@ -344,7 +362,10 @@ export async function DELETE(request: NextRequest) {
       },
     });
 
-    if (!assignment || assignment.template?.organizationId !== user.organizationId) {
+    if (
+      !assignment ||
+      assignment.template?.organizationId !== user.organizationId
+    ) {
       return NextResponse.json(
         { success: false, error: "Assignment not found" },
         { status: 404 }

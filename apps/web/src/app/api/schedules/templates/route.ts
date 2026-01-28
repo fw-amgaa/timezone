@@ -64,14 +64,11 @@ export async function GET(request: NextRequest) {
             })
           : [];
 
-      const slotsByTemplate = allSlots.reduce(
-        (acc, slot) => {
-          if (!acc[slot.templateId]) acc[slot.templateId] = [];
-          acc[slot.templateId].push(slot);
-          return acc;
-        },
-        {} as Record<string, typeof allSlots>
-      );
+      const slotsByTemplate = allSlots.reduce((acc, slot) => {
+        if (!acc[slot.templateId]) acc[slot.templateId] = [];
+        acc[slot.templateId].push(slot);
+        return acc;
+      }, {} as Record<string, typeof allSlots>);
 
       templatesWithSlots = templates.map((t) => ({
         ...t,
@@ -145,7 +142,10 @@ export async function POST(request: NextRequest) {
   const { user } = auth;
 
   // Only org_admin and org_manager can create templates
-  if (!["org_admin", "org_manager", "super_admin"].includes(user.role)) {
+  if (
+    !user.role ||
+    !["org_admin", "org_manager", "super_admin"].includes(user.role)
+  ) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }

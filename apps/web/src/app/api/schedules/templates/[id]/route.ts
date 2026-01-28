@@ -129,9 +129,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           team: a.team
             ? { id: a.team.id, name: a.team.name, color: a.team.color }
             : null,
-          user: a.user
-            ? { id: a.user.id, name: a.user.name }
-            : null,
+          user: a.user ? { id: a.user.id, name: a.user.name } : null,
           effectiveFrom: a.effectiveFrom?.toISOString() || null,
           effectiveUntil: a.effectiveUntil?.toISOString() || null,
         })),
@@ -190,7 +188,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
   const { user } = auth;
   const { id } = await params;
 
-  if (!["org_admin", "org_manager", "super_admin"].includes(user.role)) {
+  if (
+    !user.role ||
+    !["org_admin", "org_manager", "super_admin"].includes(user.role)
+  ) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }
@@ -219,7 +220,8 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     // Update template
     const updateData: Record<string, unknown> = { updatedAt: new Date() };
     if (data.name !== undefined) updateData.name = data.name;
-    if (data.description !== undefined) updateData.description = data.description;
+    if (data.description !== undefined)
+      updateData.description = data.description;
     if (data.color !== undefined) updateData.color = data.color;
     if (data.isActive !== undefined) updateData.isActive = data.isActive;
 
@@ -230,7 +232,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       .returning();
 
     // Update slots if provided
-    let updatedSlots: typeof scheduleSlots.$inferSelect[] = [];
+    let updatedSlots: (typeof scheduleSlots.$inferSelect)[] = [];
     if (data.slots) {
       // Delete existing slots and recreate
       await db.delete(scheduleSlots).where(eq(scheduleSlots.templateId, id));
@@ -244,7 +246,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         breakMinutes: slot.breakMinutes,
       }));
 
-      updatedSlots = await db.insert(scheduleSlots).values(slotInserts).returning();
+      updatedSlots = await db
+        .insert(scheduleSlots)
+        .values(slotInserts)
+        .returning();
     } else {
       // Fetch existing slots
       updatedSlots = await db.query.scheduleSlots.findMany({
@@ -255,9 +260,16 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     // If slots were updated, notify affected users
     if (data.slots) {
       try {
-        await notifyScheduleUpdate(id, updatedTemplate.name, user.organizationId!);
+        await notifyScheduleUpdate(
+          id,
+          updatedTemplate.name,
+          user.organizationId!
+        );
       } catch (notifyError) {
-        console.error("Error sending schedule update notifications:", notifyError);
+        console.error(
+          "Error sending schedule update notifications:",
+          notifyError
+        );
       }
     }
 
@@ -312,7 +324,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
   const { user } = auth;
   const { id } = await params;
 
-  if (!["org_admin", "super_admin"].includes(user.role)) {
+  if (!user.role || !["org_admin", "super_admin"].includes(user.role)) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }

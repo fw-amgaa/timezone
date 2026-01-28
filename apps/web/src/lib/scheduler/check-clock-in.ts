@@ -7,7 +7,7 @@ import { db, eq, and, isNull, gte, lte, inArray } from "@timezone/database";
 import {
   users,
   organizations,
-  timeEntries,
+  shifts,
   scheduleAssignments,
   scheduleSlots,
   scheduleTemplates,
@@ -106,8 +106,8 @@ async function getScheduledSlotsForDay(
  * Check if user is already clocked in
  */
 async function isUserClockedIn(userId: string): Promise<boolean> {
-  const activeEntry = await db.query.timeEntries.findFirst({
-    where: and(eq(timeEntries.userId, userId), isNull(timeEntries.clockOut)),
+  const activeEntry = await db.query.shifts.findFirst({
+    where: and(eq(shifts.userId, userId), isNull(shifts.clockOutAt)),
   });
   return !!activeEntry;
 }
@@ -140,14 +140,16 @@ async function wasNotificationSent(
  */
 async function recordNotificationSent(
   userId: string,
+  organizationId: string,
   slotId: string,
   type: string,
   scheduledFor: Date
 ): Promise<void> {
   await db.insert(scheduledNotifications).values({
     userId,
+    organizationId,
     scheduleSlotId: slotId,
-    type: type as any,
+    type: type,
     scheduledFor,
     status: "sent",
     processedAt: new Date(),
@@ -159,6 +161,7 @@ async function recordNotificationSent(
  */
 async function recordNotificationSkipped(
   userId: string,
+  organizationId: string,
   slotId: string,
   type: string,
   scheduledFor: Date,
@@ -166,8 +169,9 @@ async function recordNotificationSkipped(
 ): Promise<void> {
   await db.insert(scheduledNotifications).values({
     userId,
+    organizationId,
     scheduleSlotId: slotId,
-    type: type as any,
+    type: type,
     scheduledFor,
     status: "skipped",
     processedAt: new Date(),
@@ -252,6 +256,7 @@ export async function checkClockInReminders(): Promise<{
         if (isClockedIn) {
           await recordNotificationSkipped(
             slot.userId,
+            slot.organizationId,
             slot.slotId,
             `clock_in_${window}`,
             today,
@@ -296,6 +301,7 @@ export async function checkClockInReminders(): Promise<{
 
           await recordNotificationSent(
             slot.userId,
+            slot.organizationId,
             slot.slotId,
             `clock_in_${window}`,
             today

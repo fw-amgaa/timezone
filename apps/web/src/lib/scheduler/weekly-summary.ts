@@ -7,7 +7,7 @@ import { db, eq, and, gte, lt, isNotNull } from "@timezone/database";
 import {
   users,
   organizations,
-  timeEntries,
+  shifts,
   OrgLocaleSettings,
 } from "@timezone/database/schema";
 import { sendNotification } from "./push-sender";
@@ -36,16 +36,16 @@ async function calculateUserWeeklySummary(
   totalMinutes: number;
   shiftCount: number;
 }> {
-  const entries = await db.query.timeEntries.findMany({
+  const entries = await db.query.shifts.findMany({
     where: and(
-      eq(timeEntries.userId, userId),
-      gte(timeEntries.clockIn, weekStart),
-      lt(timeEntries.clockIn, weekEnd),
-      isNotNull(timeEntries.clockOut)
+      eq(shifts.userId, userId),
+      gte(shifts.clockInAt, weekStart),
+      lt(shifts.clockInAt, weekEnd),
+      isNotNull(shifts.clockOutAt)
     ),
     columns: {
-      clockIn: true,
-      clockOut: true,
+      clockInAt: true,
+      clockOutAt: true,
       breakMinutes: true,
     },
   });
@@ -54,8 +54,8 @@ async function calculateUserWeeklySummary(
   let shiftCount = 0;
 
   for (const entry of entries) {
-    if (entry.clockIn && entry.clockOut) {
-      const durationMs = entry.clockOut.getTime() - entry.clockIn.getTime();
+    if (entry.clockInAt && entry.clockOutAt) {
+      const durationMs = entry.clockOutAt.getTime() - entry.clockInAt.getTime();
       const durationMinutes = Math.round(durationMs / 60000);
       const breakMinutes = entry.breakMinutes || 0;
       const netMinutes = Math.max(0, durationMinutes - breakMinutes);

@@ -126,8 +126,9 @@ export async function PATCH(request: NextRequest) {
             eq(notifications.userId, user.id),
             eq(notifications.isRead, false)
           )
-        );
-      markedCount = result.rowCount || 0;
+        )
+        .returning({ id: notifications.id });
+      markedCount = result.length;
     } else if (data.notificationIds && data.notificationIds.length > 0) {
       // Mark specific notifications as read
       for (const notificationId of data.notificationIds) {
@@ -140,8 +141,9 @@ export async function PATCH(request: NextRequest) {
               eq(notifications.userId, user.id),
               eq(notifications.isRead, false)
             )
-          );
-        if (result.rowCount && result.rowCount > 0) {
+          )
+          .returning({ id: notifications.id });
+        if (result.length > 0) {
           markedCount++;
         }
       }

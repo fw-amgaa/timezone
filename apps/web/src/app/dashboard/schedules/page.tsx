@@ -1,4 +1,4 @@
-import { db, eq, sql } from "@timezone/database";
+import { db, eq, sql, asc } from "@timezone/database";
 import {
   scheduleTemplates,
   scheduleSlots,
@@ -50,6 +50,15 @@ async function getTemplates(organizationId: string) {
     {} as Record<string, number>
   );
 
+  type SlotInfo = {
+    id: string;
+    dayOfWeek: string;
+    startTime: string;
+    endTime: string;
+    crossesMidnight: boolean;
+    breakMinutes: number;
+  };
+
   const slotsByTemplate = allSlots.reduce(
     (acc, slot) => {
       if (!acc[slot.templateId]) acc[slot.templateId] = [];
@@ -63,7 +72,7 @@ async function getTemplates(organizationId: string) {
       });
       return acc;
     },
-    {} as Record<string, typeof allSlots>
+    {} as Record<string, SlotInfo[]>
   );
 
   return templates.map((t) => ({
@@ -87,7 +96,7 @@ async function getTeams(organizationId: string) {
       color: true,
       isActive: true,
     },
-    orderBy: [teams.name],
+    orderBy: [asc(teams.name)],
   });
 
   return orgTeams.filter((t) => t.isActive);
@@ -105,10 +114,15 @@ async function getEmployees(organizationId: string) {
       role: true,
       isActive: true,
     },
-    orderBy: [users.name],
+    orderBy: [asc(users.name)],
   });
 
-  return employees.filter((e) => e.isActive);
+  return employees
+    .filter((e) => e.isActive)
+    .map((e) => ({
+      ...e,
+      isActive: e.isActive ?? true,
+    }));
 }
 
 export default async function SchedulesPage() {

@@ -28,7 +28,10 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
   const { id: teamId } = await params;
 
   // Only org_admin and org_manager can manage team members
-  if (!["org_admin", "org_manager", "super_admin"].includes(user.role)) {
+  if (
+    !user.role ||
+    !["org_admin", "org_manager", "super_admin"].includes(user.role)
+  ) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }
@@ -64,7 +67,10 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
 
     if (validUsers.length !== data.userIds.length) {
       return NextResponse.json(
-        { success: false, error: "Some users not found or not in organization" },
+        {
+          success: false,
+          error: "Some users not found or not in organization",
+        },
         { status: 400 }
       );
     }
@@ -139,7 +145,10 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
   const { id: teamId } = await params;
 
   // Only org_admin and org_manager can manage team members
-  if (!["org_admin", "org_manager", "super_admin"].includes(user.role)) {
+  if (
+    !user.role ||
+    !["org_admin", "org_manager", "super_admin"].includes(user.role)
+  ) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }
@@ -173,12 +182,13 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
           eq(teamMembers.teamId, teamId),
           inArray(teamMembers.userId, data.userIds)
         )
-      );
+      )
+      .returning();
 
     return NextResponse.json({
       success: true,
       message: "Members removed from team",
-      removedCount: result.rowCount || 0,
+      removedCount: result.length || 0,
     });
   } catch (error) {
     if (error instanceof z.ZodError) {

@@ -622,7 +622,7 @@ export function SchedulesClient({
           <DialogHeader>
             <DialogTitle>{t("schedules.assignTo")}</DialogTitle>
             <DialogDescription>
-              {t("schedules.assignDescription", { name: assignTemplate?.name })}
+              {t("schedules.assignDescription", { name: assignTemplate?.name ?? "" })}
             </DialogDescription>
           </DialogHeader>
 

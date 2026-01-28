@@ -84,9 +84,9 @@ async function getTimeEntries(organizationId: string) {
       duration: shift.durationMinutes,
       location: shift.location?.name || "Unknown",
       status: shift.status,
-      crossedMidnight,
+      crossedMidnight: crossedMidnight ?? false,
       hoursOpen,
-      isRevised: shift.isRevised,
+      isRevised: shift.isRevised ?? false,
       clockInLocationStatus: shift.clockInLocationStatus,
       clockOutLocationStatus: shift.clockOutLocationStatus,
     };

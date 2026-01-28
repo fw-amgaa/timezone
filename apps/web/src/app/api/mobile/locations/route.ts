@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
       formattedLocations.push({
         id: "org-primary",
         name: org.name,
-        address: org.address || undefined,
+        address: org.address || null,
         latitude: parseFloat(org.latitude),
         longitude: parseFloat(org.longitude),
         radiusMeters: org.geofenceSettings?.radiusMeters || 200,

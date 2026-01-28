@@ -352,7 +352,6 @@ export function TimeEntriesClient({
                           <Moon
                             className="size-4 text-indigo-500"
                             weight="fill"
-                            title={t("timeEntries.nightShift")}
                           />
                         )}
                       </div>

@@ -76,6 +76,9 @@ export const notificationTypeEnum = pgEnum("notification_type", [
   "manager_alert",
 ]);
 
+// Type for notification types
+export type NotificationType = (typeof notificationTypeEnum.enumValues)[number];
+
 // Day of week for schedules
 export const dayOfWeekEnum = pgEnum("day_of_week", [
   "monday",

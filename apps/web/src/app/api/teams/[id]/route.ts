@@ -71,7 +71,6 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         createdAt: team.createdAt.toISOString(),
         members: members.map((m) => ({
           membershipId: m.id,
-          role: m.role,
           joinedAt: m.createdAt.toISOString(),
           ...m.user,
         })),
@@ -113,7 +112,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
   const { id } = await params;
 
   // Only org_admin and org_manager can update teams
-  if (!["org_admin", "org_manager", "super_admin"].includes(user.role)) {
+  if (
+    !user.role ||
+    !["org_admin", "org_manager", "super_admin"].includes(user.role)
+  ) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }
@@ -193,7 +195,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
   const { id } = await params;
 
   // Only org_admin can delete teams
-  if (!["org_admin", "super_admin"].includes(user.role)) {
+  if (!user.role || !["org_admin", "super_admin"].includes(user.role)) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }

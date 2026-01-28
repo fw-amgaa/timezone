@@ -154,8 +154,9 @@ export async function DELETE(request: NextRequest) {
         .set({ isActive: false, updatedAt: now })
         .where(
           and(eq(pushTokens.userId, user.id), eq(pushTokens.isActive, true))
-        );
-      removedCount = result.rowCount || 0;
+        )
+        .returning({ id: pushTokens.id });
+      removedCount = result.length;
     } else if (data.token) {
       // Deactivate specific token
       const result = await db
@@ -167,8 +168,9 @@ export async function DELETE(request: NextRequest) {
             eq(pushTokens.token, data.token),
             eq(pushTokens.isActive, true)
           )
-        );
-      removedCount = result.rowCount || 0;
+        )
+        .returning({ id: pushTokens.id });
+      removedCount = result.length;
     } else if (data.deviceId) {
       // Deactivate all tokens for this device
       const result = await db
@@ -180,8 +182,9 @@ export async function DELETE(request: NextRequest) {
             eq(pushTokens.deviceId, data.deviceId),
             eq(pushTokens.isActive, true)
           )
-        );
-      removedCount = result.rowCount || 0;
+        )
+        .returning({ id: pushTokens.id });
+      removedCount = result.length;
     }
 
     return NextResponse.json({

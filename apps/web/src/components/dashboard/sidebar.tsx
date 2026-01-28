@@ -72,7 +72,7 @@ const roleHierarchy: Record<UserRole, number> = {
   employee: 1,
 };
 
-const hasPermission = (userRole: string | undefined, requiredRole: UserRole): boolean => {
+const hasPermission = (userRole: string | null | undefined, requiredRole: UserRole): boolean => {
   const role = (userRole || "employee") as UserRole;
   return (roleHierarchy[role] || 0) >= roleHierarchy[requiredRole];
 };
@@ -157,7 +157,7 @@ interface User {
   name?: string | null;
   firstName?: string | null;
   lastName?: string | null;
-  role?: string;
+  role?: string | null;
   image?: string | null;
 }
 

@@ -86,7 +86,10 @@ export async function POST(request: NextRequest) {
   const { user } = auth;
 
   // Only org_admin and org_manager can create teams
-  if (!["org_admin", "org_manager", "super_admin"].includes(user.role)) {
+  if (
+    !user.role ||
+    !["org_admin", "org_manager", "super_admin"].includes(user.role)
+  ) {
     return NextResponse.json(
       { success: false, error: "Insufficient permissions" },
       { status: 403 }

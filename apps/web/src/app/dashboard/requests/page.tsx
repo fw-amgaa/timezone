@@ -536,11 +536,11 @@ export default function RequestsPage() {
             <DialogDescription>
               {actionType === "approve"
                 ? t("requests.dialog.approveDesc", {
-                    name: selectedRequest?.user.name,
+                    name: selectedRequest?.user.name ?? "",
                     type: selectedRequest?.type === "clock_in" ? t("requests.type.clockIn") : t("requests.type.clockOut")
                   })
                 : t("requests.dialog.denyDesc", {
-                    name: selectedRequest?.user.name,
+                    name: selectedRequest?.user.name ?? "",
                     type: selectedRequest?.type === "clock_in" ? t("requests.type.clockIn") : t("requests.type.clockOut")
                   })}
             </DialogDescription>

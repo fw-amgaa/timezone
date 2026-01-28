@@ -46,7 +46,10 @@ export async function POST(request: NextRequest) {
 
     if (!user.isActive) {
       return NextResponse.json(
-        { success: false, error: "Account is deactivated. Please contact your administrator." },
+        {
+          success: false,
+          error: "Account is deactivated. Please contact your administrator.",
+        },
         { status: 403 }
       );
     }
@@ -73,7 +76,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create session tokens
-    const session = await createMobileSession(user.id, deviceInfo);
+    const session = await createMobileSession(user.id, deviceInfo as any);
 
     // Update last login
     await db

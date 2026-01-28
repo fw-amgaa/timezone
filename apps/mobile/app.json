@@ -15,11 +15,12 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.timezone.app",
+      "bundleIdentifier": "com.esugsoft.timezone",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "TimeZone needs your location to verify you're at your workplace when clocking in and out.",
         "NSLocationAlwaysAndWhenInUseUsageDescription": "TimeZone needs your location to verify you're at your workplace when clocking in and out.",
-        "NSFaceIDUsageDescription": "TimeZone uses Face ID to quickly and securely log you in."
+        "NSFaceIDUsageDescription": "TimeZone uses Face ID to quickly and securely log you in.",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -27,7 +28,7 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#312E81"
       },
-      "package": "com.timezone.app",
+      "package": "com.esugsoft.timezone",
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",

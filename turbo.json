@@ -1,12 +1,35 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": ["**/.env.*local", "**/.env"],
+  "globalEnv": [
+    "DATABASE_URL",
+    "BETTER_AUTH_SECRET",
+    "BETTER_AUTH_URL",
+    "RESEND_API_KEY",
+    "FROM_EMAIL",
+    "NEXT_PUBLIC_APP_URL",
+    "EXPO_PUBLIC_API_URL",
+    "CRON_SECRET",
+    "SMS_URL",
+    "SMS_TOKEN"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
+      "env": [
+        "DATABASE_URL",
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL",
+        "RESEND_API_KEY",
+        "FROM_EMAIL",
+        "NEXT_PUBLIC_APP_URL",
+        "CRON_SECRET",
+        "SMS_URL",
+        "SMS_TOKEN"
+      ]
     },
     "dev": {
       "cache": false,

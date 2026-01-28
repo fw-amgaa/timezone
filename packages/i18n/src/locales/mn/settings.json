@@ -1,0 +1,140 @@
+{
+  "title": "Тохиргоо",
+  "sections": {
+    "appearance": "Харагдах байдал",
+    "language": "Хэл",
+    "security": "Аюулгүй байдал",
+    "notifications": "Мэдэгдэл",
+    "location": "Байршил",
+    "about": "Тухай"
+  },
+  "appearance": {
+    "title": "Харагдах байдал",
+    "description": "Апп-ын харагдах байдлыг сонгоно уу",
+    "theme": "Загвар",
+    "themes": {
+      "light": "Цайвар",
+      "dark": "Бараан",
+      "system": "Авто"
+    },
+    "tapToChange": "Солихын тулд дарна уу"
+  },
+  "language": {
+    "title": "Хэл",
+    "description": "Апп-ын хэлийг сонгоно уу",
+    "mongolian": "Монгол",
+    "english": "English"
+  },
+  "security": {
+    "title": "Аюулгүй байдал",
+    "changePassword": "Нууц үг солих",
+    "changePasswordDesc": "Бүртгэлийн нууц үгээ шинэчлэх",
+    "biometricLogin": "Биометрээр нэвтрэх",
+    "biometricDescription": "Face ID эсвэл хурууны хээгээр нэвтрэх",
+    "sessionTimeout": "Сессийн хугацаа",
+    "enableBiometrics": "Биометр идэвхжүүлэх",
+    "enableBiometricsMessage": "Биометрээр нэвтрэхийг идэвхжүүлэхийн тулд нууц үгээ оруулна уу."
+  },
+  "password": {
+    "title": "Нууц үг солих",
+    "description": "Одоогийн нууц үгээ оруулж, шинэ нууц үгээ сонгоно уу.",
+    "currentPassword": "Одоогийн нууц үг",
+    "currentPasswordPlaceholder": "Одоогийн нууц үгээ оруулна уу",
+    "newPassword": "Шинэ нууц үг",
+    "newPasswordPlaceholder": "Шинэ нууц үгээ оруулна уу",
+    "confirmPassword": "Шинэ нууц үг давтах",
+    "confirmPasswordPlaceholder": "Шинэ нууц үгээ давтана уу",
+    "minLength": "Дор хаяж 8 тэмдэгт байх ёстой",
+    "mismatch": "Нууц үг таарахгүй байна",
+    "updateButton": "Нууц үг шинэчлэх",
+    "success": "Нууц үг амжилттай шинэчлэгдлээ",
+    "error": {
+      "fillAll": "Бүх талбарыг бөглөнө үү",
+      "minLength": "Шинэ нууц үг дор хаяж 8 тэмдэгт байх ёстой",
+      "mismatch": "Шинэ нууц үг таарахгүй байна"
+    }
+  },
+  "notifications": {
+    "title": "Мэдэгдэл",
+    "push": "Push мэдэгдэл",
+    "pushAlerts": "Push болон сануулгын мэдэгдэл",
+    "clockInReminders": "Ажилд орох сануулга",
+    "clockInRemindersDesc": "Ээлж эхлэхэд сануулга авах",
+    "approvalAlerts": "Зөвшөөрлийн мэдэгдэл",
+    "approvalAlertsDesc": "Хүсэлт зөвшөөрөгдөх/татгалзагдахад мэдэгдэл авах",
+    "scheduleChanges": "Хуваарийн өөрчлөлт",
+    "scheduleChangesDesc": "Хуваарь өөрчлөгдөхөд мэдэгдэл авах",
+    "weeklyReports": "Долоо хоногийн тайлан",
+    "weeklyReportsDesc": "Долоо хоног бүр нэгтгэл авах",
+    "filters": {
+      "all": "Бүгд",
+      "unread": "Уншаагүй"
+    },
+    "viewDetails": "Дэлгэрэнгүй",
+    "markAllRead": "Бүгдийг уншсан гэж тэмдэглэх",
+    "empty": {
+      "allCaughtUp": "Бүгд уншигдсан!",
+      "noNotifications": "Мэдэгдэл байхгүй",
+      "allReadDesc": "Та бүх мэдэгдлийг уншсан байна.",
+      "noNotificationsDesc": "Танд одоогоор мэдэгдэл ирээгүй байна."
+    }
+  },
+  "location": {
+    "title": "Байршлын үйлчилгээ",
+    "requiredForClockIn": "Ажилд орохад шаардлагатай",
+    "highAccuracy": "Өндөр нарийвчлал",
+    "highAccuracyDesc": "GPS ашиглан илүү нарийвчлалтай байршил",
+    "backgroundLocation": "Арын байршил",
+    "backgroundLocationDesc": "Апп хаагдсан үед байршил хянах",
+    "privacyNote": "Байршлыг зөвхөн ажилд орох үед ашигладаг. Бид таны байршлыг хянадаггүй."
+  },
+  "about": {
+    "title": "Тухай",
+    "version": "TimeZone v1.0.0",
+    "termsOfService": "Үйлчилгээний нөхцөл",
+    "privacyPolicy": "Нууцлалын бодлого",
+    "licenses": "Лиценз",
+    "contact": "Холбоо барих",
+    "rateApp": "Апп үнэлэх",
+    "madeWith": "Эмч нарт зориулан бүтээв",
+    "tagline": "Эмч нарт зориулан бүтээв"
+  },
+  "support": {
+    "helpSupport": "Тусламж",
+    "privacyPolicy": "Нууцлалын бодлого"
+  },
+  "profile": {
+    "title": "Профайл",
+    "personalInfo": "Хувийн мэдээлэл",
+    "organization": "Байгууллага",
+    "preferences": "Тохиргоо",
+    "helpSupport": "Тусламж",
+    "workLocation": "Ажлын байршил",
+    "geofence": "Геофенс",
+    "yourManager": "Таны менежер",
+    "department": "Хэлтэс",
+    "startDate": "Ажилд орсон огноо",
+    "thisMonth": "Энэ сар",
+    "daysWorked": "Ажилласан өдөр",
+    "onTime": "Цагтаа",
+    "fields": {
+      "email": "Имэйл",
+      "phone": "Утас",
+      "department": "Хэлтэс",
+      "position": "Албан тушаал",
+      "startDate": "Ажилд орсон огноо",
+      "workLocation": "Ажлын байршил",
+      "manager": "Менежер",
+      "geofence": "Геофенс"
+    }
+  },
+  "account": {
+    "title": "Бүртгэл",
+    "signOut": "Гарах",
+    "signingOut": "Гарч байна...",
+    "signOutConfirm": "Та бүртгэлээс гарахдаа итгэлтэй байна уу?",
+    "signOutError": "Гарах үед алдаа гарлаа. Дахин оролдоно уу.",
+    "deleteAccount": "Бүртгэл устгах",
+    "deleteWarning": "Энэ үйлдлийг буцаах боломжгүй"
+  }
+}

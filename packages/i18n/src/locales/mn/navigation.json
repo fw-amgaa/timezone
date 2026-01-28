@@ -1,0 +1,41 @@
+{
+  "main": {
+    "dashboard": "Хянах самбар",
+    "employees": "Ажилчид",
+    "timeEntries": "Цаг бүртгэл",
+    "requests": "Хүсэлтүүд",
+    "teams": "Багууд",
+    "schedules": "Хуваарь",
+    "locations": "Байршлууд",
+    "reports": "Тайлан",
+    "profile": "Профайл",
+    "history": "Түүх",
+    "calendar": "Хуанли"
+  },
+  "admin": {
+    "dashboard": "Хянах самбар",
+    "employees": "Ажилчид",
+    "timeEntries": "Цаг бүртгэл",
+    "requests": "Хүсэлтүүд",
+    "teams": "Багууд",
+    "schedules": "Хуваарь",
+    "locations": "Байршлууд",
+    "reports": "Тайлан",
+    "organizations": "Байгууллагууд",
+    "settings": "Тохиргоо"
+  },
+  "tabs": {
+    "home": "Нүүр",
+    "history": "Түүх",
+    "calendar": "Хуанли",
+    "profile": "Профайл"
+  },
+  "actions": {
+    "notifications": "Мэдэгдэл",
+    "settings": "Тохиргоо",
+    "profile": "Профайл",
+    "signOut": "Гарах"
+  },
+  "back": "Буцах",
+  "menu": "Цэс"
+}

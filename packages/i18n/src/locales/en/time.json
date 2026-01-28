@@ -1,0 +1,106 @@
+{
+  "weekdays": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  "weekdaysShort": {
+    "monday": "Mon",
+    "tuesday": "Tue",
+    "wednesday": "Wed",
+    "thursday": "Thu",
+    "friday": "Fri",
+    "saturday": "Sat",
+    "sunday": "Sun"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  "monthsShort": {
+    "january": "Jan",
+    "february": "Feb",
+    "march": "Mar",
+    "april": "Apr",
+    "may": "May",
+    "june": "Jun",
+    "july": "Jul",
+    "august": "Aug",
+    "september": "Sep",
+    "october": "Oct",
+    "november": "Nov",
+    "december": "Dec"
+  },
+  "relative": {
+    "justNow": "Just now",
+    "minutesAgo": "{count} minutes ago",
+    "hoursAgo": "{count} hours ago",
+    "daysAgo": "{count} days ago",
+    "weeksAgo": "{count} weeks ago",
+    "monthsAgo": "{count} months ago",
+    "yearsAgo": "{count} years ago",
+    "inMinutes": "in {count} minutes",
+    "inHours": "in {count} hours",
+    "inDays": "in {count} days",
+    "short": {
+      "justNow": "Just now",
+      "minutesAgo": "{count} min ago",
+      "hoursAgo": "{count}h ago",
+      "daysAgo": "{count}d ago"
+    }
+  },
+  "periods": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This Week",
+    "lastWeek": "Last Week",
+    "nextWeek": "Next Week",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month",
+    "nextMonth": "Next Month",
+    "thisYear": "This Year",
+    "allTime": "All Time"
+  },
+  "duration": {
+    "hours": "{count} hours",
+    "minutes": "{count} minutes",
+    "seconds": "{count} seconds",
+    "hoursMinutes": "{hours}h {minutes}m",
+    "short": {
+      "hours": "{count}h",
+      "minutes": "{count}m",
+      "seconds": "{count}s"
+    }
+  },
+  "format": {
+    "time": "HH:mm",
+    "timeWithSeconds": "HH:mm:ss",
+    "date": "YYYY-MM-DD",
+    "dateShort": "MM/DD",
+    "dateFull": "MMMM D, YYYY",
+    "dateTime": "YYYY-MM-DD HH:mm",
+    "dateTimeFull": "MMMM D, YYYY, HH:mm"
+  },
+  "units": {
+    "hours": "hours",
+    "h": "h",
+    "min": "min",
+    "minutes": "minutes",
+    "seconds": "seconds"
+  }
+}

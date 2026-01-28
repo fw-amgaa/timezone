@@ -1,0 +1,124 @@
+{
+  "title": "Settings",
+  "appearance": {
+    "title": "Appearance",
+    "description": "Choose how the app looks on your device",
+    "theme": "Theme",
+    "themes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "Auto"
+    },
+    "tapToChange": "Tap to change theme"
+  },
+  "language": {
+    "title": "Language",
+    "description": "Select the app language",
+    "select": "Select Language",
+    "current": "Current Language",
+    "mongolian": "Mongolian",
+    "english": "English"
+  },
+  "security": {
+    "title": "Security",
+    "changePassword": "Change Password",
+    "changePasswordDesc": "Update your account password",
+    "biometricLogin": "Biometric Login",
+    "biometricDescription": "Use Face ID or fingerprint to sign in",
+    "twoFactor": "Two-Factor Authentication",
+    "enableBiometrics": "Enable Biometrics",
+    "enableBiometricsMessage": "You'll need to enter your password to enable biometric login."
+  },
+  "password": {
+    "title": "Change Password",
+    "description": "Enter your current password and choose a new password for your account.",
+    "currentPassword": "Current Password",
+    "currentPasswordPlaceholder": "Enter current password",
+    "newPassword": "New Password",
+    "newPasswordPlaceholder": "Enter new password",
+    "confirmPassword": "Confirm New Password",
+    "confirmPasswordPlaceholder": "Confirm new password",
+    "minLength": "Must be at least 8 characters",
+    "mismatch": "Passwords do not match",
+    "updateButton": "Update Password",
+    "success": "Your password has been updated successfully",
+    "error": {
+      "fillAll": "Please fill in all password fields",
+      "minLength": "New password must be at least 8 characters long",
+      "mismatch": "New passwords do not match"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "pushAlerts": "Push & reminder alerts",
+    "clockInReminders": "Clock-in Reminders",
+    "clockInRemindersDesc": "Get reminded to clock in at shift start",
+    "approvalAlerts": "Approval Alerts",
+    "approvalAlertsDesc": "Notify when requests are approved/denied",
+    "scheduleChanges": "Schedule Changes",
+    "scheduleChangesDesc": "Notify when your schedule is updated",
+    "weeklyReports": "Weekly Reports",
+    "weeklyReportsDesc": "Receive weekly hour summaries",
+    "filters": {
+      "all": "All",
+      "unread": "Unread"
+    },
+    "viewDetails": "View Details",
+    "markAllRead": "Mark all as read",
+    "empty": {
+      "allCaughtUp": "All caught up!",
+      "noNotifications": "No notifications",
+      "allReadDesc": "You've read all your notifications.",
+      "noNotificationsDesc": "You don't have any notifications yet."
+    }
+  },
+  "location": {
+    "title": "Location Services",
+    "requiredForClockIn": "Required for clock-in",
+    "highAccuracy": "High Accuracy Mode",
+    "highAccuracyDesc": "Use GPS for precise location tracking",
+    "backgroundLocation": "Background Location",
+    "backgroundLocationDesc": "Allow location access when app is closed",
+    "privacyNote": "Location is only used when clocking in to verify you're at your work location. We never track your location otherwise."
+  },
+  "about": {
+    "title": "About",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "version": "TimeZone v1.0.0",
+    "tagline": "Built with care for healthcare heroes"
+  },
+  "support": {
+    "helpSupport": "Help & Support",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "profile": {
+    "title": "Profile",
+    "editProfile": "Edit Profile",
+    "personalInfo": "Personal Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "position": "Position",
+    "organization": "Organization",
+    "workLocation": "Work Location",
+    "geofence": "Geofence",
+    "yourManager": "Your Manager",
+    "preferences": "Preferences",
+    "department": "Department",
+    "startDate": "Start Date",
+    "thisMonth": "This Month",
+    "daysWorked": "Days Worked",
+    "onTime": "On Time"
+  },
+  "account": {
+    "title": "Account",
+    "signOut": "Sign Out",
+    "signingOut": "Signing Out...",
+    "signOutConfirm": "Are you sure you want to sign out of your account?",
+    "signOutError": "Failed to sign out. Please try again.",
+    "deleteAccount": "Delete Account",
+    "deleteWarning": "This action cannot be undone"
+  }
+}

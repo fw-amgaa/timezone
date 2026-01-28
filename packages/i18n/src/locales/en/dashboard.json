@@ -1,0 +1,386 @@
+{
+  "title": "Dashboard",
+  "welcome": "Welcome back! Here's what's happening today.",
+  "stats": {
+    "activeEmployees": "Active Employees",
+    "currentlyIn": "Currently clocked in",
+    "hoursToday": "Hours Today",
+    "totalWorked": "Total hours worked",
+    "pendingRequests": "Pending Requests",
+    "awaitingApproval": "Awaiting approval",
+    "staleShifts": "Stale Shifts",
+    "needsResolution": "Needs resolution",
+    "regular": "Regular",
+    "overtime": "Overtime",
+    "shifts": "Shifts",
+    "avgPerDay": "Avg/Day"
+  },
+  "history": {
+    "title": "History",
+    "subtitle": "Your time entries and shifts",
+    "recentShifts": "Recent Shifts",
+    "entries": "entries",
+    "noShifts": "No shifts yet",
+    "noShiftsDescription": "Your time entries will appear here once you start clocking in.",
+    "currentlyActive": "Currently Active",
+    "night": "Night",
+    "remote": "Remote",
+    "onSite": "On-site",
+    "break": "Break",
+    "netHours": "Net Hours",
+    "type": "Type"
+  },
+  "activity": {
+    "title": "Recent Activity",
+    "subtitle": "Latest clock-ins, clock-outs, and requests",
+    "noActivity": "No recent activity",
+    "allCaughtUp": "All caught up!",
+    "clockedIn": "Clocked In",
+    "clockedOut": "Clocked Out",
+    "requestSubmitted": "submitted a request",
+    "stale": "Stale",
+    "completed": "Completed"
+  },
+  "staleShifts": {
+    "title": "Stale Shifts Require Attention",
+    "subtitle": "These employees have been clocked in for over 16 hours and may have forgotten to clock out.",
+    "clockedIn": "Clocked in",
+    "openFor": "Open for",
+    "resolve": "Resolve Stale Shift",
+    "resolveTitle": "Resolve Stale Shift",
+    "resolveDescription": "{name} has been clocked in for {duration}. How would you like to resolve this?",
+    "forgotOption": "Employee forgot to clock out",
+    "forgotDescription": "Close the shift at the clock-in time (0 hours recorded)",
+    "actualHoursOption": "Record actual hours worked",
+    "actualHoursDescription": "Set a specific clock-out time",
+    "resolving": "Resolving...",
+    "resolveButton": "Resolve Shift",
+    "success": "Shift resolved successfully",
+    "failed": "Failed to resolve shift"
+  },
+  "requests": {
+    "title": "Check-In Requests",
+    "subtitle": "Review and approve out-of-range clock-in and clock-out requests",
+    "stats": {
+      "pending": "Pending",
+      "approved7d": "Approved (7d)",
+      "denied7d": "Denied (7d)"
+    },
+    "tabs": {
+      "pending": "Pending",
+      "resolved": "Resolved"
+    },
+    "type": {
+      "clockIn": "Clock In",
+      "clockOut": "Clock Out"
+    },
+    "status": {
+      "approved": "Approved",
+      "denied": "Denied",
+      "pending": "Pending"
+    },
+    "fromWorkLocation": "from work location",
+    "requestedFor": "Requested for",
+    "submitted": "Submitted",
+    "expires": "Expires",
+    "viewMap": "View Map",
+    "actions": {
+      "approve": "Approve",
+      "deny": "Deny"
+    },
+    "empty": {
+      "allCaughtUp": "All caught up!",
+      "noPending": "There are no pending requests to review.",
+      "noResolved": "No resolved requests",
+      "noResolvedDesc": "Resolved requests will appear here."
+    },
+    "recentlyResolved": "Recently Resolved",
+    "resolvedIn7Days": "Requests resolved in the last 7 days",
+    "dialog": {
+      "approveTitle": "Approve Request",
+      "denyTitle": "Deny Request",
+      "approveDesc": "Approve {name}'s {type} request.",
+      "denyDesc": "Deny {name}'s {type} request.",
+      "noteOptional": "Note (optional)",
+      "denialReasonRequired": "Denial Reason (required)",
+      "notePlaceholder": "Add a note for this approval...",
+      "denialPlaceholder": "Explain why this request is being denied...",
+      "approveButton": "Approve Request",
+      "denyButton": "Deny Request"
+    },
+    "successApproved": "Request approved",
+    "successDenied": "Request denied"
+  },
+  "employees": {
+    "title": "Employees",
+    "subtitle": "Manage your organization's employees",
+    "addEmployee": "Add Employee",
+    "addNewEmployee": "Add New Employee",
+    "addDescription": "Add a new employee to your organization. They will receive their phone number to register on the mobile app.",
+    "editEmployee": "Edit Employee",
+    "editDescription": "Update employee information for {name}.",
+    "removeEmployee": "Remove Employee",
+    "search": "Search employees...",
+    "allEmployees": "All Employees",
+    "allEmployeesDesc": "A list of all employees in your organization",
+    "filters": {
+      "all": "All",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "phoneDescription": "Employee will use this phone number to register on the mobile app",
+      "position": "Position",
+      "department": "Department",
+      "role": "Role",
+      "registrationNumber": "Registration Number (Optional)",
+      "startDate": "Start Date",
+      "status": "Status",
+      "hoursThisWeek": "Hours This Week",
+      "lastActive": "Last Active"
+    },
+    "roles": {
+      "employee": "Employee",
+      "manager": "Manager",
+      "admin": "Admin"
+    },
+    "status": {
+      "clockedIn": "Clocked In",
+      "clockedOut": "Clocked Out",
+      "inactive": "Inactive",
+      "registered": "Registered",
+      "pending": "Pending"
+    },
+    "stats": {
+      "totalEmployees": "Total Employees",
+      "clockedIn": "Clocked In",
+      "clockedOut": "Clocked Out",
+      "hoursThisWeek": "Hours This Week"
+    },
+    "noEmployees": "No employees found",
+    "createFirst": "Add your first employee",
+    "loading": "Loading employees...",
+    "noPhone": "No phone",
+    "actions": {
+      "actions": "Actions",
+      "viewProfile": "View Profile",
+      "viewTimeEntries": "View Time Entries",
+      "edit": "Edit",
+      "remove": "Remove"
+    },
+    "confirmRemove": "Are you sure you want to remove {name}? They will no longer be able to clock in or access the system."
+  },
+  "timeEntries": {
+    "title": "Time Entries",
+    "subtitle": "All shift records",
+    "filters": {
+      "dateRange": "Date Range",
+      "status": "Status",
+      "employee": "Employee"
+    },
+    "columns": {
+      "employee": "Employee",
+      "date": "Date",
+      "clockIn": "Clock In",
+      "clockOut": "Clock Out",
+      "duration": "Duration",
+      "break": "Break",
+      "netHours": "Net Hours",
+      "status": "Status",
+      "location": "Location"
+    },
+    "status": {
+      "open": "Open",
+      "closed": "Closed",
+      "stale": "Stale",
+      "revised": "Revised",
+      "pendingRevision": "Pending Revision"
+    },
+    "nightShift": "Night Shift",
+    "noEntries": "No time entries"
+  },
+  "teams": {
+    "title": "Teams",
+    "subtitle": "Manage teams",
+    "createTeam": "Create Team",
+    "editTeam": "Edit Team",
+    "deleteTeam": "Delete Team",
+    "teamName": "Team Name",
+    "teamNamePlaceholder": "e.g., Morning Shift",
+    "description": "Description",
+    "descriptionPlaceholder": "Brief description of the team",
+    "color": "Color",
+    "members": "Members",
+    "memberCount": "{count} members",
+    "addMember": "Add Member",
+    "removeMember": "Remove Member",
+    "noTeams": "No teams yet",
+    "createFirst": "Create your first team",
+    "roles": {
+      "lead": "Lead",
+      "member": "Member"
+    },
+    "confirmDelete": "Are you sure you want to delete this team?"
+  },
+  "schedules": {
+    "title": "Schedules",
+    "subtitle": "Create and manage recurring work schedules",
+    "createTemplate": "Create Schedule",
+    "editTemplate": "Edit Schedule",
+    "deleteTemplate": "Delete Schedule",
+    "templateName": "Schedule Name",
+    "templateNamePlaceholder": "e.g., Morning Shift, Night Crew",
+    "assignments": "Assignments",
+    "assignmentCount": "{count} assignments",
+    "assignTo": "Assign",
+    "assignToTeam": "Assign to Team",
+    "assignToEmployee": "Assign to Employee",
+    "assignDescription": "Assign \"{name}\" to a team or individual employee",
+    "selectTeam": "Choose a team...",
+    "selectEmployee": "Choose an employee...",
+    "slots": "Time Slots",
+    "addSlot": "Add Slot",
+    "dayOfWeek": "Day of Week",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "nightShift": "Night Shift (ends next day)",
+    "breakMinutes": "Break (minutes)",
+    "noSchedules": "No Schedules Yet",
+    "createFirst": "Create your first schedule template to start managing employee shifts.",
+    "confirmDelete": "Are you sure you want to delete this schedule? This will remove all assignments using this schedule.",
+    "notificationsTitle": "Schedule-Based Notifications",
+    "notificationsDescription": "When you assign a schedule to a team or employee, they will receive automatic reminders to clock in/out based on their schedule. Night shifts that cross midnight are fully supported."
+  },
+  "locations": {
+    "title": "Work Locations",
+    "subtitle": "Manage geofenced areas where employees can clock in and out",
+    "addLocation": "Add Location",
+    "editLocation": "Edit Location",
+    "deleteLocation": "Delete Location",
+    "dialogDescription": "Define a geofenced area where employees can clock in/out without needing approval.",
+    "locationName": "Location Name",
+    "locationNamePlaceholder": "e.g., Main Office, Downtown Branch",
+    "address": "Address",
+    "addressPlaceholder": "123 Main St, City, State",
+    "coordinates": "Coordinates",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "radius": "Geofence Radius (meters)",
+    "radiusHelp": "Employees within this radius can clock in/out normally (50-5000m)",
+    "radiusUnit": "radius",
+    "isPrimary": "Primary Location",
+    "isPrimaryDescription": "Set as the main headquarters",
+    "noLocations": "No Locations Yet",
+    "createFirst": "Add your first work location to enable geofenced clock-in/out.",
+    "confirmDelete": "Are you sure you want to delete this location? Employees will no longer be able to clock in/out from this location without submitting a request.",
+    "viewOnMap": "View on Map",
+    "howItWorksTitle": "How Geofencing Works",
+    "howItWorksDescription": "Employees can clock in/out normally when they're within the geofence radius of any active location. When outside all geofenced areas, they must submit a check-in request with their location and reason for manager approval."
+  },
+  "reports": {
+    "title": "Reports",
+    "subtitle": "Analytics and insights for your organization",
+    "types": {
+      "hoursByEmployee": "Hours by Employee",
+      "hoursByLocation": "Hours by Location",
+      "requests": "Requests",
+      "overtime": "Overtime"
+    },
+    "period": {
+      "thisWeek": "This Week",
+      "lastWeek": "Last Week",
+      "thisMonth": "This Month",
+      "lastMonth": "Last Month",
+      "thisQuarter": "This Quarter",
+      "thisYear": "This Year",
+      "custom": "Custom"
+    },
+    "metrics": {
+      "totalHours": "Total Hours",
+      "totalHoursMonth": "Total Hours (Month)",
+      "activeEmployees": "Active Employees",
+      "averageHours": "Average Hours",
+      "totalShifts": "Total Shifts",
+      "shiftsCompleted": "Shifts Completed",
+      "approvalRate": "Approval Rate",
+      "overtimeHours": "Overtime Hours",
+      "overtimeThisWeek": "Overtime This Week"
+    },
+    "vsLastMonth": "vs last month",
+    "workedThisMonth": "worked this month",
+    "employeesOver40h": "employees over 40h",
+    "hoursByEmployeeDesc": "Total hours worked per employee this month",
+    "hoursByLocationDesc": "Work distribution across locations this month",
+    "exportCSV": "Export CSV",
+    "noDataAvailable": "No data available for this period",
+    "noLocationData": "No location data available",
+    "shiftsUnit": "shifts",
+    "employeesUnit": "employees",
+    "totalHours": "total hours",
+    "columns": {
+      "employee": "Employee",
+      "shifts": "Shifts",
+      "avgPerShift": "Avg/Shift",
+      "progress": "Progress",
+      "thisWeekHours": "This Week Hours",
+      "overtimeHours": "Overtime Hours",
+      "status": "Status"
+    },
+    "requestSummary": "Request Summary",
+    "requestSummaryDesc": "Check-in requests this month",
+    "requestStatus": {
+      "approved": "Approved",
+      "approvedDesc": "Requests accepted by managers",
+      "denied": "Denied",
+      "deniedDesc": "Requests rejected by managers",
+      "pending": "Pending",
+      "pendingDesc": "Awaiting manager review"
+    },
+    "approvalRate": "Request Approval Rate",
+    "approvalRateDesc": "How often requests are approved",
+    "totalRequestsProcessed": "{count} total requests processed",
+    "overtimeReport": "Overtime Report",
+    "overtimeReportDesc": "Employees exceeding 40 hours this week",
+    "noOvertimeTitle": "No Overtime This Week",
+    "noOvertimeDesc": "All employees are within their regular 40-hour work week."
+  },
+  "settings": {
+    "title": "Settings",
+    "organization": {
+      "title": "Organization",
+      "name": "Name",
+      "description": "Description",
+      "timezone": "Timezone",
+      "dateFormat": "Date Format",
+      "timeFormat": "Time Format"
+    },
+    "geofence": {
+      "title": "Geofence",
+      "enabled": "Geofence Enabled",
+      "radius": "Default Radius",
+      "strictMode": "Strict Mode"
+    },
+    "shifts": {
+      "title": "Shift Settings",
+      "maxHours": "Maximum Shift Hours",
+      "autoBreak": "Auto Break"
+    }
+  },
+  "organizations": {
+    "title": "Organizations",
+    "subtitle": "All organizations",
+    "createOrg": "Create Organization",
+    "editOrg": "Edit Organization",
+    "subscription": {
+      "free": "Free",
+      "starter": "Starter",
+      "professional": "Professional",
+      "enterprise": "Enterprise"
+    }
+  }
+}

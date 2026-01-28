@@ -1,0 +1,386 @@
+{
+  "title": "Хянах самбар",
+  "welcome": "Тавтай морил! Өнөөдрийн мэдээлэл энд байна.",
+  "stats": {
+    "activeEmployees": "Идэвхтэй ажилчид",
+    "currentlyIn": "Одоо ажилд ирсэн",
+    "hoursToday": "Өнөөдрийн цаг",
+    "totalWorked": "Нийт ажилласан",
+    "pendingRequests": "Хүлээгдэж буй хүсэлт",
+    "awaitingApproval": "Зөвшөөрөл хүлээж байна",
+    "staleShifts": "Хоцорсон ээлж",
+    "needsResolution": "Шийдвэрлэх шаардлагатай",
+    "regular": "Ердийн",
+    "overtime": "Илүү цаг",
+    "shifts": "Ээлжүүд",
+    "avgPerDay": "Дундаж/өдөр"
+  },
+  "history": {
+    "title": "Түүх",
+    "subtitle": "Таны цаг бүртгэл ба ээлжүүд",
+    "recentShifts": "Сүүлийн ээлжүүд",
+    "entries": "бүртгэл",
+    "noShifts": "Ээлж байхгүй",
+    "noShiftsDescription": "Та ажилдаа ирсны дараа цаг бүртгэл энд харагдана.",
+    "currentlyActive": "Одоо идэвхтэй",
+    "night": "Шөнө",
+    "remote": "Зайнаас",
+    "onSite": "Байранд",
+    "break": "Завсарлага",
+    "netHours": "Цэвэр цаг",
+    "type": "Төрөл"
+  },
+  "activity": {
+    "title": "Сүүлийн үйл ажиллагаа",
+    "subtitle": "Ажилд ирэх, явах, хүсэлтүүд",
+    "noActivity": "Сүүлийн үйл ажиллагаа байхгүй",
+    "allCaughtUp": "Бүгд шинэчлэгдсэн!",
+    "clockedIn": "Ажилд ирсэн",
+    "clockedOut": "Ажлаас явсан",
+    "requestSubmitted": "хүсэлт илгээлээ",
+    "stale": "Хоцорсон",
+    "completed": "Дууссан"
+  },
+  "staleShifts": {
+    "title": "Хоцорсон ээлжүүд анхаарал шаардаж байна",
+    "subtitle": "Эдгээр ажилчид 16 цагаас дээш хугацаанд ажилд орсон хэвээр байгаа бөгөөд гарахаа мартсан байж магадгүй.",
+    "clockedIn": "Ажилд орсон",
+    "openFor": "Үргэлжилсэн",
+    "resolve": "Хоцорсон ээлж шийдвэрлэх",
+    "resolveTitle": "Хоцорсон ээлж шийдвэрлэх",
+    "resolveDescription": "{name} нь {duration} хугацаанд ажилд орсон хэвээр. Та үүнийг хэрхэн шийдвэрлэх вэ?",
+    "forgotOption": "Ажилтан ажлаас явахаа мартсан",
+    "forgotDescription": "Ээлжийг ажилд орсон цагаар хаах (0 цаг бүртгэгдэнэ)",
+    "actualHoursOption": "Бодит ажилласан цагийг бүртгэх",
+    "actualHoursDescription": "Тодорхой ажлаас явсан цаг оруулах",
+    "resolving": "Шийдвэрлэж байна...",
+    "resolveButton": "Ээлж шийдвэрлэх",
+    "success": "Ээлж амжилттай шийдвэрлэгдлээ",
+    "failed": "Ээлж шийдвэрлэхэд алдаа гарлаа"
+  },
+  "requests": {
+    "title": "Ирцийн хүсэлтүүд",
+    "subtitle": "Ажлын байршлаас гадна ирц бүртгэх хүсэлтийг хянах",
+    "stats": {
+      "pending": "Хүлээгдэж буй",
+      "approved7d": "Зөвшөөрөгдсөн (7 хоног)",
+      "denied7d": "Татгалзсан (7 хоног)"
+    },
+    "tabs": {
+      "pending": "Хүлээгдэж буй",
+      "resolved": "Шийдвэрлэгдсэн"
+    },
+    "type": {
+      "clockIn": "Ажилд ирэх",
+      "clockOut": "Ажлаас явах"
+    },
+    "status": {
+      "approved": "Зөвшөөрөгдсөн",
+      "denied": "Татгалзсан",
+      "pending": "Хүлээгдэж буй"
+    },
+    "fromWorkLocation": "ажлын байршлаас",
+    "requestedFor": "Хүссэн цаг",
+    "submitted": "Илгээсэн",
+    "expires": "Дуусах хугацаа",
+    "viewMap": "Газрын зураг харах",
+    "actions": {
+      "approve": "Зөвшөөрөх",
+      "deny": "Татгалзах"
+    },
+    "empty": {
+      "allCaughtUp": "Бүгд шийдэгдлээ!",
+      "noPending": "Хянах хүсэлт байхгүй байна.",
+      "noResolved": "Шийдвэрлэсэн хүсэлт байхгүй",
+      "noResolvedDesc": "Шийдвэрлэсэн хүсэлтүүд энд харагдана."
+    },
+    "recentlyResolved": "Сүүлд шийдвэрлэсэн",
+    "resolvedIn7Days": "Сүүлийн 7 хоногт шийдвэрлэсэн хүсэлтүүд",
+    "dialog": {
+      "approveTitle": "Хүсэлт зөвшөөрөх",
+      "denyTitle": "Хүсэлт татгалзах",
+      "approveDesc": "{name}-ийн {type} хүсэлтийг зөвшөөрөх.",
+      "denyDesc": "{name}-ийн {type} хүсэлтийг татгалзах.",
+      "noteOptional": "Тэмдэглэл (заавал биш)",
+      "denialReasonRequired": "Татгалзах шалтгаан (заавал)",
+      "notePlaceholder": "Зөвшөөрлийн тэмдэглэл оруулах...",
+      "denialPlaceholder": "Татгалзах шалтгаанаа тайлбарлана уу...",
+      "approveButton": "Хүсэлт зөвшөөрөх",
+      "denyButton": "Хүсэлт татгалзах"
+    },
+    "successApproved": "Хүсэлт зөвшөөрөгдлөө",
+    "successDenied": "Хүсэлт татгалзагдлаа"
+  },
+  "employees": {
+    "title": "Ажилчид",
+    "subtitle": "Байгууллагын ажилчдыг удирдах",
+    "addEmployee": "Ажилтан нэмэх",
+    "addNewEmployee": "Шинэ ажилтан нэмэх",
+    "addDescription": "Байгууллагадаа шинэ ажилтан нэмнэ үү. Тэд утасны дугаараа ашиглан мобайл апп-д бүртгүүлнэ.",
+    "editEmployee": "Ажилтан засах",
+    "editDescription": "{name}-ийн мэдээллийг шинэчлэх.",
+    "removeEmployee": "Ажилтан хасах",
+    "search": "Ажилтан хайх...",
+    "allEmployees": "Бүх ажилчид",
+    "allEmployeesDesc": "Байгууллагын бүх ажилчдын жагсаалт",
+    "filters": {
+      "all": "Бүгд",
+      "active": "Идэвхтэй",
+      "inactive": "Идэвхгүй"
+    },
+    "fields": {
+      "firstName": "Нэр",
+      "lastName": "Овог",
+      "name": "Нэр",
+      "email": "Имэйл",
+      "phone": "Утасны дугаар",
+      "phoneDescription": "Ажилтан энэ утасны дугаараар мобайл апп-д бүртгүүлнэ",
+      "position": "Албан тушаал",
+      "department": "Хэлтэс",
+      "role": "Үүрэг",
+      "registrationNumber": "Бүртгэлийн дугаар (Заавал биш)",
+      "startDate": "Ажилд орсон огноо",
+      "status": "Төлөв",
+      "hoursThisWeek": "Энэ долоо хоногийн цаг",
+      "lastActive": "Сүүлд идэвхтэй"
+    },
+    "roles": {
+      "employee": "Ажилтан",
+      "manager": "Менежер",
+      "admin": "Админ"
+    },
+    "status": {
+      "clockedIn": "Ажилд орсон",
+      "clockedOut": "Ажлаас гарсан",
+      "inactive": "Идэвхгүй",
+      "registered": "Бүртгэгдсэн",
+      "pending": "Хүлээгдэж буй"
+    },
+    "stats": {
+      "totalEmployees": "Нийт ажилчид",
+      "clockedIn": "Ажилд орсон",
+      "clockedOut": "Ажлаас гарсан",
+      "hoursThisWeek": "Энэ долоо хоногийн цаг"
+    },
+    "noEmployees": "Ажилтан олдсонгүй",
+    "createFirst": "Эхний ажилтнаа нэмнэ үү",
+    "loading": "Ажилчдыг ачаалж байна...",
+    "noPhone": "Утас байхгүй",
+    "actions": {
+      "actions": "Үйлдлүүд",
+      "viewProfile": "Профайл харах",
+      "viewTimeEntries": "Цаг бүртгэл харах",
+      "edit": "Засах",
+      "remove": "Хасах"
+    },
+    "confirmRemove": "{name}-ийг хасахдаа итгэлтэй байна уу? Тэд ажилд орох, системд нэвтрэх боломжгүй болно."
+  },
+  "timeEntries": {
+    "title": "Цаг бүртгэл",
+    "subtitle": "Бүх ээлжийн бүртгэл",
+    "filters": {
+      "dateRange": "Огнооны хүрээ",
+      "status": "Төлөв",
+      "employee": "Ажилтан"
+    },
+    "columns": {
+      "employee": "Ажилтан",
+      "date": "Огноо",
+      "clockIn": "Орсон",
+      "clockOut": "Гарсан",
+      "duration": "Хугацаа",
+      "break": "Завсарлага",
+      "netHours": "Цэвэр цаг",
+      "status": "Төлөв",
+      "location": "Байршил"
+    },
+    "status": {
+      "open": "Нээлттэй",
+      "closed": "Хаагдсан",
+      "stale": "Хоцорсон",
+      "revised": "Засагдсан",
+      "pendingRevision": "Засах хүлээгдэж байна"
+    },
+    "nightShift": "Шөнийн ээлж",
+    "noEntries": "Цаг бүртгэл байхгүй"
+  },
+  "teams": {
+    "title": "Багууд",
+    "subtitle": "Багийн удирдлага",
+    "createTeam": "Баг үүсгэх",
+    "editTeam": "Баг засах",
+    "deleteTeam": "Баг устгах",
+    "teamName": "Багийн нэр",
+    "teamNamePlaceholder": "Жишээ нь: Өглөөний ээлж",
+    "description": "Тайлбар",
+    "descriptionPlaceholder": "Багийн тухай товч тайлбар",
+    "color": "Өнгө",
+    "members": "Гишүүд",
+    "memberCount": "{count} гишүүн",
+    "addMember": "Гишүүн нэмэх",
+    "removeMember": "Гишүүн хасах",
+    "noTeams": "Баг байхгүй",
+    "createFirst": "Эхний багаа үүсгэнэ үү",
+    "roles": {
+      "lead": "Ахлагч",
+      "member": "Гишүүн"
+    },
+    "confirmDelete": "Энэ багийг устгахдаа итгэлтэй байна уу?"
+  },
+  "schedules": {
+    "title": "Хуваарь",
+    "subtitle": "Давтагдах ажлын хуваарь үүсгэх",
+    "createTemplate": "Хуваарь үүсгэх",
+    "editTemplate": "Хуваарь засах",
+    "deleteTemplate": "Хуваарь устгах",
+    "templateName": "Хуваарийн нэр",
+    "templateNamePlaceholder": "Жишээ нь: Өглөөний ээлж, Шөнийн ээлж",
+    "assignments": "Хуваарилалт",
+    "assignmentCount": "{count} хуваарилалт",
+    "assignTo": "Хуваарилах",
+    "assignToTeam": "Багт хуваарилах",
+    "assignToEmployee": "Ажилтанд хуваарилах",
+    "assignDescription": "\"{name}\" хуваарийг баг эсвэл ажилтанд хуваарилах",
+    "selectTeam": "Баг сонгох...",
+    "selectEmployee": "Ажилтан сонгох...",
+    "slots": "Цагийн хуваарь",
+    "addSlot": "Цаг нэмэх",
+    "dayOfWeek": "Долоо хоногийн өдөр",
+    "startTime": "Эхлэх цаг",
+    "endTime": "Дуусах цаг",
+    "nightShift": "Шөнийн ээлж (дараа өдөр дуусна)",
+    "breakMinutes": "Завсарлага (минут)",
+    "noSchedules": "Хуваарь байхгүй",
+    "createFirst": "Ажилтнуудын ээлжийг удирдахын тулд эхний хуваарийн загвараа үүсгэнэ үү.",
+    "confirmDelete": "Энэ хуваарийг устгахдаа итгэлтэй байна уу? Энэ хуваарийг ашигласан бүх хуваарилалт устгагдана.",
+    "notificationsTitle": "Хуваарьт суурилсан мэдэгдэл",
+    "notificationsDescription": "Та баг эсвэл ажилтанд хуваарь хуваарилах үед тэд хуваарьдаа үндэслэн ажилд орох/гарах автомат сануулга авна. Шөнө дундыг давсан шөнийн ээлж бүрэн дэмжигддэг."
+  },
+  "locations": {
+    "title": "Ажлын байршлууд",
+    "subtitle": "Ажилчдын ирц бүртгэх геофенс бүсийг удирдах",
+    "addLocation": "Байршил нэмэх",
+    "editLocation": "Байршил засах",
+    "deleteLocation": "Байршил устгах",
+    "dialogDescription": "Ажилчдын хүсэлтгүйгээр ирц бүртгэх боломжтой геофенс бүсийг тодорхойлно.",
+    "locationName": "Байршлын нэр",
+    "locationNamePlaceholder": "Жишээ нь: Төв оффис, Салбар",
+    "address": "Хаяг",
+    "addressPlaceholder": "Хаяг, Хот, Дүүрэг",
+    "coordinates": "Координат",
+    "latitude": "Өргөрөг",
+    "longitude": "Уртраг",
+    "radius": "Геофенс радиус (метр)",
+    "radiusHelp": "Ажилчид энэ радиус дотор ирцээ хэвийн бүртгэнэ (50-5000м)",
+    "radiusUnit": "радиус",
+    "isPrimary": "Үндсэн байршил",
+    "isPrimaryDescription": "Гол төв оффис болгох",
+    "noLocations": "Байршил байхгүй",
+    "createFirst": "Геофенс ирц бүртгэлийг идэвхжүүлэхийн тулд эхний ажлын байршлаа нэмнэ үү.",
+    "confirmDelete": "Энэ байршлыг устгахдаа итгэлтэй байна уу? Ажилчид энэ байршлаас хүсэлтгүйгээр ирц бүртгэх боломжгүй болно.",
+    "viewOnMap": "Газрын зураг дээр харах",
+    "howItWorksTitle": "Геофенс хэрхэн ажилладаг",
+    "howItWorksDescription": "Ажилчид аль нэг идэвхтэй байршлын геофенс радиус дотор байх үед хэвийн ирц бүртгэнэ. Бүх геофенс бүсээс гадна байх үед байршил, шалтгаанаа оруулж, менежерийн зөвшөөрлийн хүсэлт илгээх шаардлагатай."
+  },
+  "reports": {
+    "title": "Тайлан",
+    "subtitle": "Байгууллагын дүн шинжилгээ ба мэдээлэл",
+    "types": {
+      "hoursByEmployee": "Ажилтнаар цаг",
+      "hoursByLocation": "Байршлаар цаг",
+      "requests": "Хүсэлтүүд",
+      "overtime": "Илүү цаг"
+    },
+    "period": {
+      "thisWeek": "Энэ долоо хоног",
+      "lastWeek": "Өнгөрсөн долоо хоног",
+      "thisMonth": "Энэ сар",
+      "lastMonth": "Өнгөрсөн сар",
+      "thisQuarter": "Энэ улирал",
+      "thisYear": "Энэ жил",
+      "custom": "Тусгай"
+    },
+    "metrics": {
+      "totalHours": "Нийт цаг",
+      "totalHoursMonth": "Нийт цаг (Сар)",
+      "activeEmployees": "Идэвхтэй ажилчид",
+      "averageHours": "Дундаж цаг",
+      "totalShifts": "Нийт ээлж",
+      "shiftsCompleted": "Гүйцэтгэсэн ээлж",
+      "approvalRate": "Зөвшөөрлийн хувь",
+      "overtimeHours": "Илүү цаг",
+      "overtimeThisWeek": "Энэ долоо хоногийн илүү цаг"
+    },
+    "vsLastMonth": "өнгөрсөн сартай харьцуулахад",
+    "workedThisMonth": "энэ сард ажилласан",
+    "employeesOver40h": "40 цагаас давсан ажилчид",
+    "hoursByEmployeeDesc": "Энэ сард ажилтан бүрийн нийт ажилласан цаг",
+    "hoursByLocationDesc": "Энэ сард байршлуудаар ажлын хуваарилалт",
+    "exportCSV": "CSV экспорт",
+    "noDataAvailable": "Энэ хугацаанд мэдээлэл байхгүй",
+    "noLocationData": "Байршлын мэдээлэл байхгүй",
+    "shiftsUnit": "ээлж",
+    "employeesUnit": "ажилтан",
+    "totalHours": "нийт цаг",
+    "columns": {
+      "employee": "Ажилтан",
+      "shifts": "Ээлж",
+      "avgPerShift": "Дундаж/Ээлж",
+      "progress": "Явц",
+      "thisWeekHours": "Энэ долоо хоногийн цаг",
+      "overtimeHours": "Илүү цаг",
+      "status": "Төлөв"
+    },
+    "requestSummary": "Хүсэлтийн нэгтгэл",
+    "requestSummaryDesc": "Энэ сарын ирцийн хүсэлтүүд",
+    "requestStatus": {
+      "approved": "Зөвшөөрөгдсөн",
+      "approvedDesc": "Менежерээс зөвшөөрөгдсөн хүсэлтүүд",
+      "denied": "Татгалзсан",
+      "deniedDesc": "Менежерээс татгалзагдсан хүсэлтүүд",
+      "pending": "Хүлээгдэж буй",
+      "pendingDesc": "Менежерийн хянахыг хүлээж байна"
+    },
+    "approvalRate": "Хүсэлт зөвшөөрлийн хувь",
+    "approvalRateDesc": "Хүсэлтүүдийг хэр олон удаа зөвшөөрдөг",
+    "totalRequestsProcessed": "{count} хүсэлт боловсруулагдсан",
+    "overtimeReport": "Илүү цагийн тайлан",
+    "overtimeReportDesc": "Энэ долоо хоногт 40 цагаас давсан ажилчид",
+    "noOvertimeTitle": "Энэ долоо хоногт илүү цаг байхгүй",
+    "noOvertimeDesc": "Бүх ажилчид ердийн 40 цагийн ажлын хүрээнд байна."
+  },
+  "settings": {
+    "title": "Тохиргоо",
+    "organization": {
+      "title": "Байгууллага",
+      "name": "Нэр",
+      "description": "Тайлбар",
+      "timezone": "Цагийн бүс",
+      "dateFormat": "Огнооны формат",
+      "timeFormat": "Цагийн формат"
+    },
+    "geofence": {
+      "title": "Геофенс",
+      "enabled": "Геофенс идэвхтэй",
+      "radius": "Үндсэн радиус",
+      "strictMode": "Хатуу горим"
+    },
+    "shifts": {
+      "title": "Ээлжийн тохиргоо",
+      "maxHours": "Хамгийн их ээлжийн цаг",
+      "autoBreak": "Автомат завсарлага"
+    }
+  },
+  "organizations": {
+    "title": "Байгууллагууд",
+    "subtitle": "Бүх байгууллагын жагсаалт",
+    "createOrg": "Байгууллага үүсгэх",
+    "editOrg": "Байгууллага засах",
+    "subscription": {
+      "free": "Үнэгүй",
+      "starter": "Эхлэгч",
+      "professional": "Мэргэжлийн",
+      "enterprise": "Аж ахуйн нэгж"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "TimeZone",
+    "slug": "timezone",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "timezone",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#312E81"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.timezone.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "TimeZone needs your location to verify you're at your workplace when clocking in and out.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "TimeZone needs your location to verify you're at your workplace when clocking in and out.",
+        "NSFaceIDUsageDescription": "TimeZone uses Face ID to quickly and securely log you in."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#312E81"
+      },
+      "package": "com.timezone.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "TimeZone needs your location to verify you're at your workplace when clocking in and out."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "TimeZone uses Face ID to quickly and securely log you in."
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#312E81",
+          "image": "./assets/icon.png"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "307ce4f1-2192-43e9-9983-80ad84d4ca38"
+      }
+    },
+    "owner": "amkanotsorry"
+  }
+}

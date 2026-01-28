@@ -1,0 +1,30 @@
+{
+  "name": "timezone",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:web": "turbo dev --filter=@timezone/web",
+    "dev:mobile": "turbo dev --filter=@timezone/mobile",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "db:generate": "pnpm --filter=@timezone/database db:generate",
+    "db:migrate": "pnpm --filter=@timezone/database db:migrate",
+    "db:push": "pnpm --filter=@timezone/database db:push",
+    "db:studio": "pnpm --filter=@timezone/database db:studio",
+    "clean": "turbo clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.3.3",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

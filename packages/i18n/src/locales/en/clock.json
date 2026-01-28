@@ -1,0 +1,215 @@
+{
+  "greeting": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening"
+  },
+  "buttons": {
+    "clockIn": "Clock In",
+    "clockOut": "Clock Out",
+    "request": "Request",
+    "pending": "Pending"
+  },
+  "status": {
+    "clockedIn": "Clocked In",
+    "clockedOut": "Clocked Out",
+    "notClockedIn": "Not Clocked In",
+    "inRange": "In Range",
+    "outOfRange": "Out of Range",
+    "pending": "Request Pending"
+  },
+  "location": {
+    "withinWorkZone": "You're within the work zone",
+    "outsideWorkZone": "You're outside the work zone",
+    "away": "away",
+    "gettingLocation": "Getting location...",
+    "locationRequired": "Location Required",
+    "enableLocation": "Please enable location services",
+    "locationError": "Could not get location",
+    "permissionRequired": "Location permission required"
+  },
+  "shift": {
+    "currentShift": "Current Shift",
+    "startedAt": "Started At",
+    "duration": "Duration",
+    "break": "Break",
+    "netHours": "Net Hours",
+    "tapToStart": "Tap to start your shift",
+    "tapToEnd": "Tap to end your shift",
+    "requestPending": "Your request is being reviewed"
+  },
+  "history": {
+    "title": "History",
+    "subtitle": "Your time entries and shifts",
+    "recentShifts": "Recent Shifts",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "allTime": "All Time",
+    "entries": "entries",
+    "noShifts": "No shifts yet",
+    "noShiftsYet": "Your time entries will appear here once you start clocking in.",
+    "totalHours": "Total Hours",
+    "regularHours": "Regular",
+    "overtimeHours": "Overtime",
+    "shiftsCompleted": "shifts completed"
+  },
+  "request": {
+    "title": "Submit Request",
+    "subtitle": "Check-in/out request",
+    "type": "Request Type",
+    "clockInRequest": "Clock-In Request",
+    "clockOutRequest": "Clock-Out Request",
+    "reason": "Explanation",
+    "reasonPlaceholder": "Explain why you're outside the work zone",
+    "reasonPlaceholderHistorical": "e.g., I forgot to clock out yesterday when I left at 5pm...",
+    "reasonPlaceholderCurrent": "e.g., I'm at the satellite clinic for an emergency consultation...",
+    "reasonMinLength": "Reason must be at least 10 characters",
+    "reasonDescription": "Please explain why you need to clock in from outside the designated area.",
+    "reasonDescriptionHistorical": "Please explain why you missed this clock-in/out and why you're submitting it now.",
+    "photo": "Location Photo",
+    "photoOptional": "(Optional)",
+    "photoDescription": "Take a photo showing your current surroundings for verification.",
+    "photoDescriptionHistorical": "You can optionally add a photo for verification.",
+    "photoNotice": "Photos must be taken directly from the camera. Gallery images are not accepted for security reasons.",
+    "takePhoto": "Take Photo",
+    "openCamera": "Open Camera",
+    "tapToTakePhoto": "Tap to take a photo",
+    "retake": "Retake",
+    "submitButton": "Submit Request",
+    "successMessage": "Request submitted successfully",
+    "successTitle": "Request Submitted",
+    "successDescription": "Your {type} request has been sent to your manager for approval.",
+    "successDescriptionHistorical": "Your historical {type} request has been sent to your manager for approval.",
+    "footerNote": "Your request will be reviewed by your manager. You'll receive a notification once it's approved or denied.",
+    "historical": {
+      "title": "Historical Request",
+      "toggle": "Historical Request",
+      "toggleDescription": "For a missed clock-in/out from the past",
+      "date": "Date",
+      "time": "Time",
+      "dateTime": "Date & Time",
+      "dateTimeDescription": "Select when the missed clock-in/out occurred.",
+      "maxDays": "Must be within the last 30 days",
+      "mustBePast": "Historical requests must be for past dates/times."
+    },
+    "location": {
+      "title": "Location Details",
+      "workLocation": "Work Location",
+      "currentLocation": "Your Current Location",
+      "gettingLocation": "Getting location...",
+      "loading": "Loading..."
+    },
+    "banner": {
+      "clockInTitle": "Clock-In Request",
+      "clockOutTitle": "Clock-Out Request",
+      "clockInDescription": "Submit a request for out-of-range clock-in",
+      "clockOutDescription": "Submit a request for out-of-range clock-out"
+    },
+    "camera": {
+      "title": "Take Photo",
+      "guideText": "Position your surroundings in frame",
+      "permissionTitle": "Camera Access Required",
+      "permissionDescription": "To submit an out-of-range clock-in request, you must take a photo of your current location. This helps verify your whereabouts.",
+      "grantAccess": "Grant Camera Access",
+      "goBack": "Go Back"
+    },
+    "alerts": {
+      "locationRequired": "Location Required",
+      "locationRequiredMessage": "Please enable location services to submit a check-in request.",
+      "locationError": "Failed to get your location. Please try again.",
+      "explanationRequired": "Please provide a detailed explanation (at least 10 characters).",
+      "photoRequired": "Please take a photo of your current location.",
+      "locationUnavailable": "Location not available. Please try again.",
+      "invalidDate": "Invalid Date",
+      "submitError": "Failed to submit request. Please try again.",
+      "genericError": "Something went wrong. Please try again."
+    }
+  },
+  "dialogs": {
+    "clockIn": {
+      "title": "Clock In",
+      "message": "Are you sure you want to clock in?"
+    },
+    "clockOut": {
+      "title": "Clock Out",
+      "message": "Are you sure you want to clock out?",
+      "duration": "Time worked: {duration}"
+    },
+    "outOfRange": {
+      "title": "Out of Range",
+      "message": "You're outside the work zone. Submit a request?"
+    }
+  },
+  "calendar": {
+    "title": "Calendar",
+    "today": "Today",
+    "thisWeek": "This Week",
+    "ofHours": "of {hours}h",
+    "shiftsCompleted": "shifts completed",
+    "selectDay": "Select a Day",
+    "noShiftsOnDay": "No shifts on this day",
+    "legend": {
+      "worked": "Worked",
+      "active": "Active",
+      "stale": "Stale",
+      "revised": "Revised"
+    },
+    "weekdays": {
+      "sun": "Sun",
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat"
+    },
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "entry": {
+      "clockIn": "Clock In",
+      "clockOut": "Clock Out",
+      "duration": "Duration",
+      "remote": "Remote",
+      "active": "Active"
+    },
+    "status": {
+      "completed": "Completed",
+      "active": "Active",
+      "revised": "Revised",
+      "pending": "Pending",
+      "stale": "Stale"
+    }
+  },
+  "stale": {
+    "title": "Stale Shift",
+    "description": "This shift has been open for more than 16 hours",
+    "resolution": {
+      "forgot": "Forgot to clock out",
+      "actualHours": "Enter actual hours"
+    },
+    "actualEndTime": "Actual end time",
+    "resolveButton": "Resolve"
+  },
+  "schedule": {
+    "todayShift": "Today's Shift",
+    "start": "Start",
+    "end": "End",
+    "break": "Break",
+    "dayOff": "You have no shift today",
+    "noSchedule": "No schedule assigned",
+    "late": "You're {minutes} minutes late",
+    "nightShift": "Night shift (ends next day)"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "main": {
+    "clock": "Clock",
+    "history": "History",
+    "profile": "Profile",
+    "settings": "Settings",
+    "calendar": "Calendar"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "employees": "Employees",
+    "timeEntries": "Time Entries",
+    "requests": "Requests",
+    "teams": "Teams",
+    "schedules": "Schedules",
+    "locations": "Locations",
+    "reports": "Reports",
+    "settings": "Settings",
+    "organizations": "Organizations"
+  },
+  "tabs": {
+    "overview": "Overview",
+    "details": "Details",
+    "activity": "Activity"
+  },
+  "actions": {
+    "goBack": "Go Back",
+    "goHome": "Go Home",
+    "openMenu": "Open Menu",
+    "closeMenu": "Close Menu",
+    "signOut": "Sign Out"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "dashboard": "Dashboard"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "weekdays": {
+    "monday": "Даваа",
+    "tuesday": "Мягмар",
+    "wednesday": "Лхагва",
+    "thursday": "Пүрэв",
+    "friday": "Баасан",
+    "saturday": "Бямба",
+    "sunday": "Ням"
+  },
+  "weekdaysShort": {
+    "monday": "Да",
+    "tuesday": "Мя",
+    "wednesday": "Лх",
+    "thursday": "Пү",
+    "friday": "Ба",
+    "saturday": "Бя",
+    "sunday": "Ня"
+  },
+  "months": {
+    "january": "1-р сар",
+    "february": "2-р сар",
+    "march": "3-р сар",
+    "april": "4-р сар",
+    "may": "5-р сар",
+    "june": "6-р сар",
+    "july": "7-р сар",
+    "august": "8-р сар",
+    "september": "9-р сар",
+    "october": "10-р сар",
+    "november": "11-р сар",
+    "december": "12-р сар"
+  },
+  "monthsFull": {
+    "january": "Нэгдүгээр сар",
+    "february": "Хоёрдугаар сар",
+    "march": "Гуравдугаар сар",
+    "april": "Дөрөвдүгээр сар",
+    "may": "Тавдугаар сар",
+    "june": "Зургадугаар сар",
+    "july": "Долдугаар сар",
+    "august": "Наймдугаар сар",
+    "september": "Есдүгээр сар",
+    "october": "Аравдугаар сар",
+    "november": "Арван нэгдүгээр сар",
+    "december": "Арван хоёрдугаар сар"
+  },
+  "relative": {
+    "justNow": "Дөнгөж сая",
+    "minutesAgo": "{count} минутын өмнө",
+    "hoursAgo": "{count} цагийн өмнө",
+    "daysAgo": "{count} өдрийн өмнө",
+    "weeksAgo": "{count} долоо хоногийн өмнө",
+    "monthsAgo": "{count} сарын өмнө",
+    "yearsAgo": "{count} жилийн өмнө",
+    "inMinutes": "{count} минутын дараа",
+    "inHours": "{count} цагийн дараа",
+    "inDays": "{count} өдрийн дараа",
+    "short": {
+      "justNow": "Дөнгөж сая",
+      "minutesAgo": "{count} мин өмнө",
+      "hoursAgo": "{count}ц өмнө",
+      "daysAgo": "{count}ө өмнө"
+    }
+  },
+  "periods": {
+    "today": "Өнөөдөр",
+    "yesterday": "Өчигдөр",
+    "tomorrow": "Маргааш",
+    "thisWeek": "Энэ долоо хоног",
+    "lastWeek": "Өнгөрсөн долоо хоног",
+    "nextWeek": "Дараа долоо хоног",
+    "thisMonth": "Энэ сар",
+    "lastMonth": "Өнгөрсөн сар",
+    "nextMonth": "Дараа сар",
+    "thisYear": "Энэ жил",
+    "allTime": "Бүх цаг"
+  },
+  "duration": {
+    "hours": "{count} цаг",
+    "minutes": "{count} минут",
+    "seconds": "{count} секунд",
+    "hoursMinutes": "{hours} цаг {minutes} мин",
+    "short": {
+      "hours": "{count}ц",
+      "minutes": "{count}м",
+      "seconds": "{count}с"
+    }
+  },
+  "format": {
+    "time": "HH:mm",
+    "timeWithSeconds": "HH:mm:ss",
+    "date": "YYYY-MM-DD",
+    "dateShort": "MM/DD",
+    "dateFull": "YYYY оны M сарын D",
+    "dateTime": "YYYY-MM-DD HH:mm",
+    "dateTimeFull": "YYYY оны M сарын D, HH:mm"
+  },
+  "units": {
+    "hours": "цаг",
+    "h": "ц",
+    "min": "мин",
+    "minutes": "минут",
+    "seconds": "секунд"
+  }
+}

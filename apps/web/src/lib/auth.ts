@@ -72,6 +72,7 @@ export const auth = betterAuth({
   },
 
   trustedOrigins: ["http://localhost:3000", "http://localhost:3001"],
+  secret: process.env.BETTER_AUTH_SECRET,
 
   advanced: {
     database: {
